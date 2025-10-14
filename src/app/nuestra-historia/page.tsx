@@ -5,7 +5,6 @@ import {
   MainStory,
   MisionVision,
   OurValues,
-  Timeline,
 } from "./components";
 
 const NuestraHistoria = () => {
@@ -14,7 +13,6 @@ const NuestraHistoria = () => {
       <Container>
         <Hero />
         <MainStory />
-        <Timeline />
         <MisionVision />
         <OurValues />
       </Container>
