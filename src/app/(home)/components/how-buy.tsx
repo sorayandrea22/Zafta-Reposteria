@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export const HowBuy = () => {
   return (
-    <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 items-center justify-center gap-4">
-      <div className="space-y-6 ">
+    <div className="mt-20 text-center">
+      <div className="space-y-6">
         <h3
           className={` ${fontLust.className} antialiased text-xl sm:text-4xl text-burgundy `}
         >
@@ -22,15 +22,6 @@ export const HowBuy = () => {
         >
           Entra a la tienda
         </Link>
-      </div>
-      <div className="relative h-52 sm:h-full w-full">
-        <Image
-          src="/img/MG_9966.webp"
-          alt="How Buy"
-          className="absolute object-cover w-full h-full "
-          fill
-          unoptimized
-        />
       </div>
     </div>
   );

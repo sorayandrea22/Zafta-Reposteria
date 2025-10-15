@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { timeline } from "./timeline.data";
 import { fontLust } from "@/config/font";
+import Image from "next/image";
 
 export const Timeline = () => {
   return (
@@ -34,7 +35,16 @@ export const Timeline = () => {
                 {item.description}
               </p>
             </div>
-            <div className="md:w-1/2 h-64 bg-rosegold/20 rounded-lg"></div>
+            <div className="md:w-1/2 h-64 bg-rosegold/20 rounded-lg flex items-center">
+              <Image
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover bg-top-left  rounded-lg"
+                width={300}
+                height={300}
+                unoptimized
+              />
+            </div>
           </motion.div>
         ))}
       </div>

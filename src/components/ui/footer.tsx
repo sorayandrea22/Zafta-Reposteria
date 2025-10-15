@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { Container } from "./container";
 import Link from "next/link";
-import { FaLocationArrow, FaMailchimp, FaWhatsapp } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const Footer = () => {
   return (
     <footer className="bg-primary py-10">
       <div>
-        <Container className="grid grid-cols-1 sm:grid-cols-3 gap-10  text-center">
+        <Container className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center  sm:text-start">
           <div className="mx-auto sm:mx-0">
             <picture>
               <Image
