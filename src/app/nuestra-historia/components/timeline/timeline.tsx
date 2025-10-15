@@ -1,14 +1,14 @@
 "use client";
 import { motion } from "motion/react";
 import { timeline } from "./timeline.data";
-import { fontFredoka, fontLust } from "@/config/font";
+import { fontLust } from "@/config/font";
 
 export const Timeline = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="pt-20 px-4">
       <div className="max-w-4xl mx-auto">
         <h2
-          className={`${fontLust.className} antialiased text-4xl font-extrabold text-primary mb-16 text-center`}
+          className={`${fontLust.className} antialiased text-xl sm:text-4xl font-extrabold text-burgundy mb-16 text-center`}
         >
           Nuestra Trayectoria
         </h2>
@@ -23,12 +23,14 @@ export const Timeline = () => {
               index % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
           >
-            <div className={`${fontLust.className} antialiased md:w-1/2 p-8`}>
-              <span className="text-3xl text-rosegold">{item.year}</span>
-              <h3 className=" text-2xl text-burgundy mt-2 mb-4">
+            <div className="md:w-1/2 p-8">
+              <span className="font-lustria text-2xl sm:text-3xl text-rosegold">
+                {item.year}
+              </span>
+              <h3 className="font-lustria text-xl sm:text-2xl text-burgundy mt-2 mb-4">
                 {item.title}
               </h3>
-              <p className={`${fontFredoka.className} text-navy `}>
+              <p className="font-fredoka text-navy text-sm sm:text-lg">
                 {item.description}
               </p>
             </div>

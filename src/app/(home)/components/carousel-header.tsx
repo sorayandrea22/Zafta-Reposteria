@@ -12,19 +12,22 @@ import "swiper/css/effect-fade";
 import "./styles.css";
 
 // import required modules
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 
 export const CarouselHeader = () => {
   return (
     <>
       <Swiper
         pagination={{
-          dynamicBullets: true,
+          clickable: true,
         }}
         effect="fade"
         loop={true}
-        navigation={true}
-        modules={[EffectFade, Pagination, Navigation]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, EffectFade, Pagination]}
       >
         <SwiperSlide>
           <div className="h-96 w-full">

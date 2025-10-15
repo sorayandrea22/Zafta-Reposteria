@@ -5,14 +5,19 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import AuthButton from "../auth/auth-button";
+import { Hamburguer } from "./hamburguer";
+import { useUIStore } from "@/store/ui/ui.store";
+import { HamburguerIcon } from "./hamburguer-icon";
+import { Container } from "./container";
 
 export const HeaderNavigation = () => {
+  const isSideMenu = useUIStore((state) => state.isSideMenuOpen);
   return (
     <motion.header
-      className={` bg-burgundy w-full z-50 transition-all duration-300`}
+      className={`bg-burgundy  w-full h-24 z-50 transition-all duration-300`}
     >
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <Container className="">
+        <nav className="flex items-center justify-center  sm:justify-between pt-4">
           {/* Logo - Updated to be responsive */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -20,7 +25,7 @@ export const HeaderNavigation = () => {
             transition={{ duration: 0.6 }}
             className="font-lustria text-2xl font-bold text-ivory"
           >
-            <Link href="/" className="block">
+            <Link href="/" className="inline-block">
               <Image
                 src="/img/logo.png"
                 alt="Zafta Logo"
@@ -55,27 +60,16 @@ export const HeaderNavigation = () => {
             ))}
           </motion.div>
 
-          {/* Right side: Cart + Auth */}
-          {/* <div className="flex items-center space-x-4"> */}
-          {/* Shopping Cart */}
-          {/* <motion.div */}
-          {/*   initial={{ opacity: 0, x: 20 }} */}
-          {/*   animate={{ opacity: 1, x: 0 }} */}
-          {/*   transition={{ duration: 0.6, delay: 0.3 }} */}
-          {/* > */}
-          {/* <CartButton user={user ?? null} /> */}
-          {/* </motion.div> */}
-          {/**/}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            className="hidden "
           >
             <AuthButton />
           </motion.div>
-          {/* </div> */}
-        </div>
-      </nav>
+        </nav>
+      </Container>
     </motion.header>
   );
 };

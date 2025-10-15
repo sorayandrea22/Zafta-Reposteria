@@ -10,8 +10,8 @@ export const AboutFeatured = async () => {
 
   return (
     <div className="my-20">
-      <h2 className="text-primary text-5xl text-center ">
-        Nuestros Destacados
+      <h2 className="text-primary text-lg sm:text-5xl text-center ">
+        ¿Qué se te antoja hoy?
       </h2>
       <p className="text-center pt-4">
         Haz tu pedido en línea y recíbelo con sabor a hogar

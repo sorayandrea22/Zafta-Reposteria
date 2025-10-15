@@ -16,8 +16,8 @@ export const AddToCart = () => {
         stock={12}
       />
       <div className="space-y-4">
-        <button className=" py-4 px-8 border-2 border-burgundy text-burgundy text-center rounded-xl font-fredoka font-bold text-lg hover:bg-burgundy/10 transition-colors">
-          <span className="flex gap-4">
+        <button className="py-4 px-8 border-2 border-burgundy text-burgundy text-center rounded-xl font-fredoka font-bold text-lg hover:bg-burgundy/10 transition-colors">
+          <span className="flex items-center gap-4 text-sm sm:text-lg">
             <IoCartOutline size={30} />
             Agregar al carrito
           </span>

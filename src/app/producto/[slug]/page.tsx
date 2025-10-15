@@ -14,7 +14,7 @@ const ProductSlug = async ({ params }: Props) => {
   if (!product) return null;
 
   return (
-    <Container className="mt-5 my-10">
+    <Container className="my-10">
       <BreadCrumbSeparator name={product.name} slug={product.slug} />
       <ProductCard product={product} />
     </Container>

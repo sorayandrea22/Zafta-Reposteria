@@ -11,10 +11,25 @@ export const ContactForm = () => {
             htmlFor="name"
             className="block font-fredoka font-semibold text-navy mb-2"
           >
-            nombre completo
+            Nombre
           </label>
           <input
             type="text"
+            id="name"
+            name="name"
+            required
+            className="w-full px-4 py-3 border border-rosegold/30 focus:border-burgundy rounded-lg outline-none transition-colors"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="email"
+            className="block font-fredoka font-semibold text-navy mb-2"
+          >
+            Email
+          </label>
+          <input
+            type="email"
             id="name"
             name="name"
             required
@@ -33,16 +48,16 @@ export const ContactForm = () => {
       </form>
 
       {/* success message */}
-      <div className="mt-6 bg-green-50 border border-green-200 text-green-700 p-4 rounded-lg">
-        <p className="font-fredoka font-semibold">
-          ¡mensaje enviado con éxito!
-        </p>
-        <p className="text-sm mt-1">te responderemos lo más pronto posible.</p>
-      </div>
-
-      <div className="mt-6 bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg">
-        <p className="font-fredoka font-semibold">error al enviar el mensaje</p>
-      </div>
+      {/* <div className="mt-6 bg-green-50 border border-green-200 text-green-700 p-4 rounded-lg"> */}
+      {/*   <p className="font-fredoka font-semibold"> */}
+      {/*     ¡mensaje enviado con éxito! */}
+      {/*   </p> */}
+      {/*   <p className="text-sm mt-1">te responderemos lo más pronto posible.</p> */}
+      {/* </div> */}
+      {/**/}
+      {/* <div className="mt-6 bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg"> */}
+      {/*   <p className="font-fredoka font-semibold">error al enviar el mensaje</p> */}
+      {/* </div> */}
     </div>
   );
 };

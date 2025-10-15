@@ -7,6 +7,7 @@ import { ThumbsGalleryCard } from "./thumbs-gallery-card";
 import { AddToCart } from "./add-to-cart";
 import { Product } from "@/interfaces";
 import { formatPrice } from "@/utils";
+import { MobileThumbsGalleryCard } from "./mobile-thumbs-gallery-card";
 
 // transition={{ delay: index * 0.1 }}
 //
@@ -17,23 +18,29 @@ interface Props {
 
 export const ProductCard = ({ product }: Props) => {
   return (
-    <section className="py-8 px-4">
+    <section className="sm:my-8 sm:mx-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-12"
         >
           {/* Product Image */}
-          <div className="space-y-4">
+          <div className="hidden sm:block space-y-4">
             <ThumbsGalleryCard images={product.images} name={product.name} />
+          </div>
+          <div className="space-y-4 sm:hidden">
+            <MobileThumbsGalleryCard
+              images={product.images}
+              name={product.name}
+            />
           </div>
 
           {/* Product Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              <span className="text-green-600 font-semibold">
+              <span className="text-green-600 font-semibold text-sm sm:text-lg">
                 {product.stock === 1
                   ? "1 disponible"
                   : `${product.stock} disponibles`}
@@ -44,7 +51,7 @@ export const ProductCard = ({ product }: Props) => {
 
             {/* Title */}
             <h1
-              className={`${fontLust.className} antialised  text-4xl lg:text-5xl text-burgundy`}
+              className={`${fontLust.className} antialised  text-2xl lg:text-5xl text-burgundy`}
             >
               {product.name}
             </h1>
@@ -52,7 +59,7 @@ export const ProductCard = ({ product }: Props) => {
               href={`/productos/slug`}
               className="inline-block text-sm text-burgundy font-semibold bg-burgundy/10 px-3 py-1 rounded-full hover:bg-burgundy/20 transition-colors"
             >
-              Repostería
+              Postres
             </Link>
 
             {/* Price */}

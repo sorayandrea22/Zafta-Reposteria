@@ -40,8 +40,8 @@ export const CardProduct = ({ product }: Props) => {
 
               {/* Featured badge */}
               {featured && (
-                <div className="absolute top-3 left-3 px-2 py-1 bg-burgundy text-ivory rounded-full text-xs font-semibold">
-                  ⭐ Destacado
+                <div className="absolute top-3 left-3 px-4 py-1 bg-burgundy text-ivory rounded-full text-xs font-semibold">
+                  Destacado
                 </div>
               )}
             </div>

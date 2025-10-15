@@ -1,22 +1,22 @@
 import { Container } from "@/components/ui";
 import {
   Hero,
-  LegacyCall,
   MainStory,
   MisionVision,
   OurValues,
+  Timeline,
 } from "./components";
 
 const NuestraHistoria = () => {
   return (
     <>
-      <Container>
+      <Container className="pb-20">
         <Hero />
         <MainStory />
-        <MisionVision />
+        <Timeline />
         <OurValues />
+        <MisionVision />
       </Container>
-      <LegacyCall />
     </>
   );
 };

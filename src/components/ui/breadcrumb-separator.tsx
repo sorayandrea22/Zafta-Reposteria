@@ -18,7 +18,9 @@ interface Props {
 export const BreadCrumbSeparator = ({ name, slug }: Props) => {
   return (
     <Breadcrumb>
-      <BreadcrumbList className={`${fontFredoka.className} antialiased py-4`}>
+      <BreadcrumbList
+        className={`${fontFredoka.className} antialiased py-4 text-sm sm:text-lg`}
+      >
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
             <Link href="/">Inicio</Link>
@@ -33,7 +35,7 @@ export const BreadCrumbSeparator = ({ name, slug }: Props) => {
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            <Link href="/categoria">Panaderia</Link>
+            <Link href="/categoria">Tortas</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />

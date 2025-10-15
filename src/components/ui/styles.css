@@ -22,9 +22,10 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: white;
-  height: 1.5rem;
-  width: 1.5rem;
+  border: 2px solid white;
+  background: transparent;
+  height: 0.8rem;
+  width: 0.8rem;
 }
 
 .swiper-button-next {

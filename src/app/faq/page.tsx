@@ -8,6 +8,7 @@ const Faq = () => {
       <HeaderContent
         title="Preguntas Frecuentes"
         subtitle="Todo lo que necesitas saber sobre nuestros productos y servicios"
+        className=""
       />
       <Container className="my-20">
         <Content />

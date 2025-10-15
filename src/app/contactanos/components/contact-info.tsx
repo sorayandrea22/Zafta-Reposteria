@@ -10,63 +10,66 @@ export const ContactInfo = () => {
       <div className="space-y-6">
         <div className="flex items-start">
           <div className="bg-rosegold/20 p-3 rounded-full mr-4">
-            <span className="text-2xl">📱</span>
+            <span className="text-2xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#80001e"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+              </svg>
+            </span>
           </div>
           <div>
             <h3 className="font-lustria font-semibold text-navy mb-1">
               whatsapp
             </h3>
-            <p className="font-fredoka text-navy/70">+57 321 759 0897</p>
-            <p className="font-fredoka text-sm text-navy/60 mt-1">
-              lunes a viernes: 8am - 5pm <br />
-              sábados: 8am - 12pm
-            </p>
+            <p className="font-fredoka text-navy/70">+57 311 747 9392</p>
           </div>
         </div>
-
         <div className="flex items-start">
           <div className="bg-rosegold/20 p-3 rounded-full mr-4">
-            <span className="text-2xl">📧</span>
+            <span className="text-2xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#80001e"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+              </svg>
+            </span>
           </div>
           <div>
-            <h3 className="font-lustria font-semibold text-navy mb-1">email</h3>
-            <p className="font-fredoka text-navy/70">contacto@zafta.com</p>
-            <p className="font-fredoka text-sm text-navy/60 mt-1">
-              respondemos en menos de 24 horas
+            <h3 className="font-lustria font-semibold text-navy mb-1">
+              Instagram
+            </h3>
+            <p className="font-fredoka text-navy/70">
+              <a
+                href="https://www.instagram.com/zafta_reposteria"
+                target="__blank"
+                className="hover:text-burgundy cursor-pointer"
+              >
+                @zafta_reposteria
+              </a>
             </p>
-          </div>
-        </div>
-
-        {/* social media section */}
-        <div className="pt-6 border-t border-rosegold/20">
-          <h3 className="font-lustria font-semibold text-navy mb-3">
-            síguenos en redes
-          </h3>
-          <div className="flex space-x-4">
-            <Link
-              href="https://instagram.com/zafta"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-rosegold/20 hover:bg-rosegold/30 p-3 rounded-full transition-colors"
-            >
-              <span className="text-xl">📸</span>
-            </Link>
-            <Link
-              href="https://facebook.com/zafta"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-rosegold/20 hover:bg-rosegold/30 p-3 rounded-full transition-colors"
-            >
-              <span className="text-xl">📘</span>
-            </Link>
-            <Link
-              href="https://tiktok.com/@zafta"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-rosegold/20 hover:bg-rosegold/30 p-3 rounded-full transition-colors"
-            >
-              <span className="text-xl">🎵</span>
-            </Link>
           </div>
         </div>
       </div>

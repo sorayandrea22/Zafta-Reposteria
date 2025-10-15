@@ -10,8 +10,8 @@ interface Props {
 
 export const HeaderContent = ({ title, subtitle, className = "" }: Props) => {
   return (
-    <div className={`bg-burgundy text-white pt-24 ${className}`}>
-      <div className="container mx-auto px-6 text-center">
+    <div className={`bg-burgundy text-white  ${className}`}>
+      <div className="container mx-auto  py-14 text-center">
         <motion.h1
           className="text-4xl md:text-5xl lg:text-6xl font-lust font-extrabold"
           initial={{ opacity: 0, y: -20 }}

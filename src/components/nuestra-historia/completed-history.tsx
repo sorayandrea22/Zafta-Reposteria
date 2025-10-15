@@ -1,25 +1,16 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { motion, useScroll, useSpring } from "motion/react";
+import { Content } from "./content";
 
 export const CompletedHistory = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   return (
-    <Dialog>
-      <DialogTrigger>Nuestra Historia Completa</DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Nuestra Historia Completa</DialogTitle>
-          <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </DialogDescription>
-        </DialogHeader>
-      </DialogContent>
-    </Dialog>
+    <>
+      <Content />
+    </>
   );
 };

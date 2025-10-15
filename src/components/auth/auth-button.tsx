@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function AuthButton() {
   return (
-    <div className="flex items-center space-x-3">
+    <div className="hidden sm:flex items-center space-x-3">
       <motion.a
         href="/auth/login"
         whileHover={{ scale: 1.05 }}
