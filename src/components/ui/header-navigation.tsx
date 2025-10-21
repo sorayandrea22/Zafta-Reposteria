@@ -11,14 +11,13 @@ import { HamburguerIcon } from "./hamburguer-icon";
 import { Container } from "./container";
 
 export const HeaderNavigation = () => {
-  const isSideMenu = useUIStore((state) => state.isSideMenuOpen);
+  const openSideMenu = useUIStore((state) => state.openSideMenu);
   return (
     <motion.header
-      className={`bg-burgundy  w-full h-24 z-50 transition-all duration-300`}
+      className={`bg-burgundy w-32 h-24 z-50 transition-all duration-300`}
     >
-      <Container className="">
-        <nav className="flex items-center justify-center  sm:justify-between pt-4">
-          {/* Logo - Updated to be responsive */}
+      <Container>
+        <nav className="flex items-center justify-between pt-4">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -64,9 +63,18 @@ export const HeaderNavigation = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="hidden "
+            className="hidden sm:flex "
           >
             <AuthButton />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex sm:hidden "
+            onClick={openSideMenu}
+          >
+            <HamburguerIcon />
           </motion.div>
         </nav>
       </Container>
