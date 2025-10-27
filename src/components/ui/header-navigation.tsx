@@ -5,13 +5,11 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import AuthButton from "../auth/auth-button";
-import { Hamburguer } from "./hamburguer";
 import { useUIStore } from "@/store/ui/ui.store";
-import { HamburguerIcon } from "./hamburguer-icon";
 import { Container } from "./container";
 
 export const HeaderNavigation = () => {
-  const isSideMenuOpen = useUIStore((state) => state.openSideMenu);
+  const isSideMenuOpen = useUIStore((state) => state.openSideMenu());
   return (
     <motion.header
       className={`bg-burgundy w-full h-24 z-50 transition-all duration-300`}
@@ -70,7 +68,7 @@ export const HeaderNavigation = () => {
 
           <button
             className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
-            onClick={() => isSideMenuOpen()}
+            onClick={() => isSideMenuOpen}
           >
             Menu
           </button>
