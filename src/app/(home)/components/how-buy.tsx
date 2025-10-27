@@ -9,13 +9,28 @@ export const HowBuy = () => {
         <h3
           className={` ${fontLust.className} antialiased text-xl sm:text-4xl text-burgundy `}
         >
-          Como Comprar
+          ¿Y entonces cómo pido mi torta?
         </h3>
         <p className="prose text-sm sm:text-lg">
-          Elige la torta que quieres. Mira todas las opciones que tenemos
-          disponibles para ti y elige el sabor y tamaño de tu torta favorita.
-          También creamos tortas personalizadas.
+          1. Elige tu favorita.
+          <span className="block">
+            Mira los sabores y tamaños disponibles que tenemos.
+          </span>
         </p>
+        <p className="prose text-sm sm:text-lg">
+          2. Personalizala.
+          <span className="block">
+            ¿Tienes una idea diferente? ¡Contáctanos por WhatsApp y la hacemos
+            realidad!
+          </span>
+        </p>
+        <p className="prose text-sm sm:text-lg">
+          3. Haz tu Pedido.
+          <span className="block">
+            Confirma los detalles y listo... nosotros nos encargamos del resto.
+          </span>
+        </p>
+
         <Link
           href="/productos-de-linea"
           className="inline-block bg-burgundy text-white rounded-lg px-5 py-2 mb-4 sm:mb-0"

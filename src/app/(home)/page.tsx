@@ -7,7 +7,7 @@ export default function Home() {
       <CarouselHeader />
       <div className="h-28 w-full bg-primary flex items-center justify-center">
         <h2 className="text-lg sm:text-4xl text-center text-white">
-          En ZAFTA lo delicioso se vuelve tradicion.
+          En ZAFTA lo delicioso se vuelve tradición.
         </h2>
       </div>
 

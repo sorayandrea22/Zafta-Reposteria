@@ -12,6 +12,7 @@ export function WelcomeModal() {
     if (!hasVisited) {
       setIsOpen(true);
       localStorage.setItem("zafta-welcome", "true");
+      localStorage.removeItem("zafta-welcome");
     }
   }, []);
 

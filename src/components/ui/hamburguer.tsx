@@ -1,16 +1,37 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { useUIStore } from "@/store/ui/ui.store";
 import { Navigation } from "@/utils";
 import Link from "next/link";
 import { IoCloseOutline } from "react-icons/io5";
 
 export const Hamburguer = () => {
+  const isSideMenuOpen = useUIStore((state) => state.isSideMenuOpen);
   const closeSideMenu = useUIStore((state) => state.closeSideMenu);
   return (
     <>
-      <div className="fixed top-0 left-0 w-full h-full bg-black opacity-85"></div>
-      <nav className=" relative fixed top-0 right-0 w-64 h-screen bg-burgundy text-ivory shadow-lg z-50 transform transition-transform duration-300 ease-in-out">
+      {isSideMenuOpen && (
+        <div
+          className="
+        fixed top-0 left-0 w-screen h-screen z-10 bg-black opacity-40
+        "
+        ></div>
+      )}
+
+      {isSideMenuOpen && (
+        <div
+          className="fade-in fixed top-0 left-0 w-screen h-screen z-10  backdrop-blur-xs"
+          onClick={() => closeSideMenu()}
+        ></div>
+      )}
+
+      <nav
+        className={cn(
+          "fixed p-5 right-0 top-0 w-[400px] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300",
+          { "translate-x-full": !isSideMenuOpen },
+        )}
+      >
         <IoCloseOutline
           onClick={() => {
             closeSideMenu();
@@ -18,7 +39,7 @@ export const Hamburguer = () => {
           size={30}
           className="absolute top-2 right-0"
         />
-        <div className="mt-10">
+        <div>
           {Navigation.map((item) => (
             <Link
               key={item.path}
